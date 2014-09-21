@@ -1,0 +1,11 @@
+package pb;
+
+message Token {
+	optional string encryptedId = 1;
+	required uint64 id= 2;
+	required uint64 clientId = 3;
+	required uint64 expires = 4;
+	optional uint64 refreshId = 5;
+	repeated int32 scope = 6;
+}
+

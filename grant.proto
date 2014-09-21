@@ -1,0 +1,19 @@
+package pb;
+
+message AuthorizationCode {
+	optional string encryptedId = 1;
+	required uint64 id = 2;
+	required uint64 clientId = 3;
+	required uint64 expires = 4;
+	repeated int32 scope = 5;
+}
+
+message ClientCredentials {
+	optional string encryptedId = 1;
+	required uint64 id = 2;
+	required string secret = 3;
+	required uint64 userId = 4;
+	required uint32 regionId = 5;
+	required string redirectUri = 6;
+	repeated int32 scope = 7;
+}
